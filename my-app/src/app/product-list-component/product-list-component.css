@@ -1,0 +1,21 @@
+thead tr {
+    background-color: yellow;
+}
+
+table, tr, td, th {
+    border: 1px;
+    border-style: solid;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: pink;
+}
+
+tbody tr:nth-child(2n+1) {
+    background-color: cyan;
+}
+
+.negative-price {
+    color: red;
+    text-decoration: line-through;
+}

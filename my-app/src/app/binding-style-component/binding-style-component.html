@@ -1,0 +1,9 @@
+<p>binding-style-component works!</p>
+<div class="progress-bar-container">
+  <div
+    class="progress-bar"
+    [style.width.%]="progressValue"
+    [style.background]="getProgressGradient()">
+  </div>
+</div>
+<p [style.color]="isCritical() ? 'red' : getProgressColor()">System status: Running</p>

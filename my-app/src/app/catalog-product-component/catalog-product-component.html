@@ -1,0 +1,23 @@
+<div class="catalog-container">
+  <div class="catalog-group" *ngFor="let category of categories">
+    <table class="catalog-table" border="1" cellpadding="8" cellspacing="0">
+      <tr>
+        <th colspan="5">{{ category.Cateid }}</th>
+      </tr>
+      <tr>
+        <th>Ma San Pham</th>
+        <th>Ten San Pham</th>
+        <th>Gia San Pham</th>
+        <th>Picture</th>
+      </tr>
+      <tr *ngFor="let product of category.Products">
+        <td>{{ product.ProductId }}</td>
+        <td>{{ product.ProductName }}</td>
+        <td>{{ product.Price }}</td>
+        <td>
+          <img [src]="product.Image" [alt]="product.ProductName" width="90" height="90" />
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

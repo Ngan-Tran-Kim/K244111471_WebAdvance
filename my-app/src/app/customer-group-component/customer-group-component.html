@@ -1,0 +1,32 @@
+<h2>Exercise 18: Json Array Model – Group Customers</h2>
+<p class="err" *ngIf="errMessage">{{errMessage}}</p>
+
+<div *ngFor="let g of groups" class="group-block">
+  <table border="1" class="type-table">
+    <tr>
+      <td>CustomerTypeId</td>
+      <td>CustomterTypeName</td>
+    </tr>
+    <tr>
+      <td>{{g.CustomerTypeId}}</td>
+      <td>{{g.CustomterTypeName}}</td>
+    </tr>
+  </table>
+
+  <table border="1" class="customer-table">
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Email</td>
+      <td>Age</td>
+      <td>Avatar</td>
+    </tr>
+    <tr *ngFor="let c of g.Customers">
+      <td>{{c.Id}}</td>
+      <td>{{c.Name}}</td>
+      <td>{{c.Email}}</td>
+      <td>{{c.Age}}</td>
+      <td><img src="{{c.Image}}" width="50"></td>
+    </tr>
+  </table>
+</div>

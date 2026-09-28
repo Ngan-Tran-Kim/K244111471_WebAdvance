@@ -1,0 +1,51 @@
+<h3>Cách 1: *ngFor</h3>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.id }}</td>
+      <td>{{ product.name }}</td>
+      <td>
+        <img [src]="product.imageUrl" [alt]="product.name" width="60" height="60" />
+      </td>
+      <td>{{ product.price }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Cách 2: &#64;for</h3>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (product of products; track product.id) {
+      <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>
+          <img [src]="product.imageUrl" [alt]="product.name" width="60" height="60" />
+        </td>
+        <td>
+          <span
+            [style.color]="isNegativePrice(product.price) ? 'red' : 'black'"
+            [style.text-decoration]="isNegativePrice(product.price) ? 'line-through' : 'none'">
+            {{ product.price }}
+          </span>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

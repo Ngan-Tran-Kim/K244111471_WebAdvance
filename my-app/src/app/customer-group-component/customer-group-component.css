@@ -1,0 +1,14 @@
+.group-block {
+  margin-bottom: 20px;
+}
+.type-table {
+  width: 320px;
+  margin-bottom: -1px;
+}
+.customer-table {
+  width: 620px;
+}
+.err {
+  color: #c62828;
+  font-weight: bold;
+}
